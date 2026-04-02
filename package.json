@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vonageflow.spec.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvidal1/rayvgis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rvidal1/rayvgis/issues"
+  },
+  "homepage": "https://github.com/rvidal1/rayvgis#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}
