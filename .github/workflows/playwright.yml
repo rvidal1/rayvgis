@@ -35,7 +35,7 @@ jobs:
 
       # 6️⃣ Upload HTML report
       - name: Upload HTML report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-html-report
           path: playwright-report/
@@ -43,7 +43,7 @@ jobs:
       # 7️⃣ Upload other test artifacts (screenshots, videos, traces)
       - name: Upload test artifacts
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-failure-artifacts
           path: test-results/
