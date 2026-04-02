@@ -1,5 +1,8 @@
 name: Playwright Tests
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     branches: [main]
@@ -34,9 +37,13 @@ jobs:
           name: playwright-html-report
           path: playwright-report/
 
-      - name: Upload test artifacts on failure
-        if: failure()
+      - name: Upload test artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-failure-artifacts
-          path: test-results/
+          path:
+	    playwright-report 
+	    test-results/
+          if-no-files-found:ignore
+          
